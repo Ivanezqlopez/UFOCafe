@@ -1,6 +1,6 @@
 body {
     /* Asegúrate de que el fondo sea compatible con el estilo de la imagen */
-    background-image: url('../images/FondoUFOCAFE.png');
+    background-image: url('/UFOCafe/images/FondoUFOCAFE.png');
     background-size: 100% auto;
     background-position: center;
     background-repeat: no-repeat;
