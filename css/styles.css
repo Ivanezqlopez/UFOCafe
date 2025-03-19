@@ -491,3 +491,9 @@ footer {
 .wifi-text p {
     margin: 5px 0; /* Espaciado uniforme entre párrafos */
 }
+
+.scroll-top-image {
+    width: 45px; /* Ajusta el tamaño según prefieras */
+    height: 45px;
+    display: block; /* Asegura que la imagen ocupe el espacio correctamente */
+}
