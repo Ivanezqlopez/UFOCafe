@@ -1,7 +1,7 @@
-/* Base styles (apply to all devices) */
+/* Base styles */
 body {
     background-image: url('/UFOCafe/images/FondoUFOCAFE.png');
-    background-size: cover; /* Changed to cover for better scaling */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 16px; /* Base font size for rem/em scaling */
+    font-size: 16px;
 }
 
 html {
@@ -23,11 +23,11 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px; /* Reduced padding for smaller screens */
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
     flex-grow: 1;
-    gap: 20px; /* Reduced gap for smaller screens */
+    gap: 20px;
 }
 
 .intro {
@@ -35,7 +35,7 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-bottom: 50px; /* Reduced margin */
+    margin-bottom: 50px;
 }
 
 .logo {
@@ -48,7 +48,7 @@ h1 {
     font-family: 'Cinzel', serif;
     color: #ffffff;
     margin: 10px 0;
-    font-size: clamp(2.5rem, 8vw, 4.3rem); /* Dynamic font size */
+    font-size: clamp(2.5rem, 8vw, 4.3rem);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -58,6 +58,8 @@ h2 {
     font-size: clamp(1.5rem, 5vw, 2rem);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     margin: 20px 0 10px;
+    text-align: center;
+    width: 100%;
 }
 
 h3 {
@@ -77,9 +79,9 @@ h3 {
 
 .button-container {
     display: flex;
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Reduced gap */
+    gap: 15px;
     padding: 10px 0;
 }
 
@@ -87,7 +89,7 @@ h3 {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #ffffff;
     color: #ffffff;
-    padding: 10px 20px; /* Slightly reduced padding */
+    padding: 10px 20px;
     border-radius: 25px;
     font-size: clamp(1rem, 3vw, 1.3rem);
     cursor: pointer;
@@ -103,6 +105,9 @@ h3 {
 }
 
 .section-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1000px;
     margin-bottom: 20px;
@@ -110,18 +115,35 @@ h3 {
 
 .section {
     background-color: rgba(43, 29, 18, 0.9);
-    padding: 15px; /* Reduced padding */
+    padding: 15px;
     border-radius: 10px;
     border: 3px solid #8b5a2b;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
+    width: 100%;
 }
 
 /* Menu Section */
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.butler-kat {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    mask-image: linear-gradient(black 93%, transparent);
+}
+
 .menu-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic columns */
-    gap: 10px; /* Reduced gap */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 100%;
 }
 
 .menu-card {
@@ -181,8 +203,9 @@ h3 {
 /* Gallery Section */
 .gallery-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
+    width: 100%;
 }
 
 .gallery-image {
@@ -222,7 +245,7 @@ h3 {
 .modal-image,
 .carousel-image {
     width: 100%;
-    max-width: 80vw; /* Limit width on smaller screens */
+    max-width: 80vw;
     max-height: 80vh;
     object-fit: contain;
     border: 2px solid #8b5a2b;
@@ -230,6 +253,9 @@ h3 {
 }
 
 .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(43, 29, 18, 0.9);
     color: #f5e8c7;
     border: 2px solid #8b5a2b;
@@ -248,7 +274,15 @@ h3 {
 }
 
 .carousel-title {
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cinzel', serif;
+    color: #eacf9f;
     font-size: clamp(1.2rem, 4vw, 1.5rem);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 1002;
 }
 
 /* Footer */
@@ -258,22 +292,27 @@ footer {
     border: 3px solid #8b5a2b;
     width: 100%;
     text-align: center;
+    margin-top: auto;
 }
 
 .wifi {
     display: flex;
-    flex-direction: column; /* Stack on small screens */
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .wifi-image {
     width: 100%;
     max-width: 200px;
+    height: auto;
 }
 
 .wifi-text {
-    text-align: center;
+    text-align: left;
     font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
@@ -303,7 +342,7 @@ footer {
     }
 
     .gallery-section {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
     }
 
     .carousel-btn.prev {
@@ -321,25 +360,26 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .menu-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .gallery-section {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1025px) {
     .menu-section {
-        grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .gallery-section {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .wifi {
-        flex-direction: row; /* Horizontal layout on desktop */
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }
