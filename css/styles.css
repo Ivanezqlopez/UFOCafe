@@ -404,6 +404,14 @@ h3 {
     background-color: rgba(43, 29, 18, 1);
 }
 
+.menu-carousel-btn.prev {
+    left: 600px;
+}
+
+.menu-carousel-btn.next {
+    right: 600px;
+}
+
 .carousel-btn.prev {
     left: 10px;
 }
