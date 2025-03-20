@@ -1,7 +1,7 @@
+/* Base styles (apply to all devices) */
 body {
-    /* Asegúrate de que el fondo sea compatible con el estilo de la imagen */
     background-image: url('/UFOCafe/images/FondoUFOCAFE.png');
-    background-size: 100% auto;
+    background-size: cover; /* Changed to cover for better scaling */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,75 +12,58 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px; /* Base font size for rem/em scaling */
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-.butler-kat {
-    mask-image: linear-gradient(black 93%, transparent);
-}
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 20px; /* Reduced padding for smaller screens */
     max-width: 1200px;
     margin: 0 auto;
     flex-grow: 1;
-    min-height: 100vh;
-    gap: 40px;  
+    gap: 20px; /* Reduced gap for smaller screens */
 }
 
 .intro {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0px;
-    margin-bottom: 100px;
     text-align: center;
-}
-
-.section-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1000px;
-    margin-bottom: 20px;
-}
-
-.section {
-    background-color: rgba(43, 29, 18, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    border: 3px solid #8b5a2b;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    margin-bottom: 50px; /* Reduced margin */
 }
 
 .logo {
+    width: 100%;
     max-width: 280px;
-    max-height: 199px;
-
+    height: auto;
 }
 
 h1 {
     font-family: 'Cinzel', serif;
     color: #ffffff;
     margin: 10px 0;
-    font-size: 4.3rem;
+    font-size: clamp(2.5rem, 8vw, 4.3rem); /* Dynamic font size */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    color: #eacf9f;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 20px 0 10px;
 }
 
 h3 {
     font-family: 'Cinzel', serif;
     color: #ffffff;
-    margin-top: 25px;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
     letter-spacing: 0.15rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -88,63 +71,57 @@ h3 {
 .location {
     font-family: 'Arial', sans-serif;
     color: #ffffff;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
     margin: 10px 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
 
 .button-container {
     display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
     justify-content: center;
-    gap: 30px; /* Aumenta el espacio entre botones para separarlos más */
-    margin: 10px;
-    padding: 10px 0; /* Añade un poco de padding vertical para el contenedor */
+    gap: 15px; /* Reduced gap */
+    padding: 10px 0;
 }
 
-
 .welcome-btn {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente como en la imagen */
-    border: 2px solid #ffffff; /* Borde blanco */
-    color: #ffffff; /* Texto blanco */
-    padding: 12px 25px; /* Más padding para un tamaño similar a la imagen */
-    border-radius: 25px; /* Bordes más redondeados como en la imagen */
-    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px; /* Slightly reduced padding */
+    border-radius: 25px;
+    font-size: clamp(1rem, 3vw, 1.3rem);
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Transición para hover y efecto */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    display: inline-block;
-    font-family: 'Arial', sans-serif; /* Asegura una fuente legible */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil como en la imagen */
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .welcome-btn:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Cambio de color al pasar el ratón */
-    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
 }
 
-.section-wrapper h2 {
-    font-family: 'Cinzel', serif;
-    color: #eacf9f;
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin: 20px 0 10px;
+.section-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 20px;
+}
+
+.section {
+    background-color: rgba(43, 29, 18, 0.9);
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    border: 3px solid #8b5a2b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
-
-
-
-/* Menú con 5 columnas */
-.menu-wrapper .section-wrapper {
-    max-width: 1000px;
-    
-}
-
+/* Menu Section */
 .menu-section {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic columns */
+    gap: 10px; /* Reduced gap */
 }
 
 .menu-card {
@@ -156,176 +133,61 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
-
-.menu-card-title {
-    font-family: 'Arial', sans-serif;
-    font-size: 1rem;
-    margin: 5px 0;
-    color: #eacf9f;
 }
 
 .menu-card-image {
-    max-width: 100%;
+    width: 100%;
     max-height: 100px;
+    object-fit: cover;
     border-radius: 5px;
     border: 1.5px solid #8b5a2b;
-    margin: 5px 0;
-    cursor: pointer; /* Add cursor pointer */
-    transition: transform 0.2s; /* Add transition for hover effect */
-}
-
-.menu-card-image:hover {
-    transform: scale(1.1); /* Same hover effect as gallery images */
-}
-
-.menu-card-description {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    color: #f5e8c7;
-    margin: 5px 0;
-    line-height: 1.3;
-}
-
-.menu-card-price {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    color: #eacf9f;
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-/* Quiénes somos */
-.about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 40px;
-}
-
-.about-image {
-    max-width: 100%;
-    max-height: 200px;
-    border-radius: 5px;
-    border: 2px solid #8b5a2b;
-    margin-bottom: 15px;
-}
-
-.about-section p {
-    margin: 0;
-    font-size: 1.3rem;
-    line-height: 1.5;
-    color: #f5e8c7;
-}
-
-/* Staff con 3 columnas */
-.staff-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.staff-member {
-    margin: 0;
-    color: #f5e8c7;
-    text-align: center; /* Centra el texto */
-}
-
-.staff-member img {
-    max-width: 100%;
-    border-radius: 5px;
-    border: 2px solid #8b5a2b;
-}
-
-.staff-member p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-}
-
-.staff-description {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem; /* Texto un poco más pequeño que el nombre */
-    color: #eacf9f; /* Color que armonice con el tema */
-    margin: 5px 0 0;
-    line-height: 1.3;
-    font-style: italic; /* Opcional: estilo cursivo para diferenciarlo */
-}
-
-/* Estilos para las imágenes del staff con modal */
-.staff-image {
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.staff-image:hover {
-    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+.menu-card-image:hover {
+    transform: scale(1.1);
 }
 
-/* Estilos del modal */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro semitransparente */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    opacity: 0; /* Comienza con opacidad 0 para la animación */
-    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
-}
-
-.modal.active {
-    display: flex;
-    opacity: 1; /* Opacidad completa cuando está activo */
-}
-
-/* Animación de acercamiento para la imagen */
-.modal-image {
-    max-width: 80%;
-    max-height: 80vh;
-    border: 2px solid #8b5a2b;
-    border-radius: 5px;
-    transform: scale(0.5); /* Comienza con un tamaño reducido */
-    transition: transform 0.5s ease; /* Transición suave para el zoom */
-}
-
-.modal.active .modal-image {
-    transform: scale(1); /* Se acerca a tamaño completo cuando el modal está activo */
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #f5e8c7;
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close:hover {
+.menu-card-title {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: #eacf9f;
 }
 
-/* Estilos para la galería */
-.gallery-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.menu-card-description,
+.menu-card-price {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
-.gallery-item {
-    margin: 0;
-    text-align: center;
+/* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #8b5a2b;
+}
+
+.about-section p {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+/* Gallery Section */
+.gallery-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Dynamic columns */
+    gap: 15px;
 }
 
 .gallery-image {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     border: 2px solid #8b5a2b;
     cursor: pointer;
@@ -336,80 +198,45 @@ h3 {
     transform: scale(1.1);
 }
 
-/* Estilos para el carrusel en el modal */
-.gallery-modal .carousel {
-    position: relative;
-    display: flex;
-    align-items: center;
+/* Modal and Carousel */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
     justify-content: center;
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    max-width: 1000px; /* Limita el ancho máximo para evitar desbordamientos */
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-
-
-
-/* Estilos para los botones del carrusel */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(43, 29, 18, 0.9); /* Fondo más opaco para mayor visibilidad */
-    color: #f5e8c7; /* Color del texto claro */
-    border: 2px solid #8b5a2b; /* Borde para que destaque */
-    font-size: 2rem;
-    padding: 10px 15px; /* Aumenta el padding para que el botón sea más grande */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    z-index: 1001; /* Asegura que esté por encima de la imagen */
-    border-radius: 5px; /* Bordes redondeados para mejor estética */
+.modal.active {
+    display: flex;
+    opacity: 1;
 }
 
-.carousel-btn:hover {
-    background-color: rgba(43, 29, 18, 1); /* Más oscuro al pasar el ratón */
-}
-
-.carousel-btn.prev {
-    left: 20px; /* Ajusta la posición para que no esté demasiado cerca del borde */
-}
-
-.carousel-btn.next {
-    right: 20px; /* Ajusta la posición para que sea simétrico */
-}
-
-/* Estilos para la imagen del carrusel */
+.modal-image,
 .carousel-image {
-    width: 600px;
-    height: 600px;
-    object-fit: cover;
+    width: 100%;
+    max-width: 80vw; /* Limit width on smaller screens */
+    max-height: 80vh;
+    object-fit: contain;
     border: 2px solid #8b5a2b;
     border-radius: 5px;
-    z-index: 1000; /* Asegura que la imagen esté detrás de los botones */
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(43, 29, 18, 0.8);
+    background-color: rgba(43, 29, 18, 0.9);
     color: #f5e8c7;
-    border: none;
-    font-size: 2rem;
-    padding: 10px;
+    border: 2px solid #8b5a2b;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    padding: 5px 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carousel-btn:hover {
-    background-color: rgba(43, 29, 18, 1);
-}
-
-.menu-carousel-btn.prev {
-    left: 600px;
-}
-
-.menu-carousel-btn.next {
-    right: 600px;
+    border-radius: 5px;
 }
 
 .carousel-btn.prev {
@@ -420,96 +247,99 @@ h3 {
     right: 10px;
 }
 
-/* Estilos para el texto de la galería */
-.gallery-item p {
-    margin: 5px 0 0;
-    font-size: 1rem;
-    color: #f5e8c7;
-    text-align: center;
-}
-
-.gallery-description {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.9rem;
-    color: #eacf9f;
-    margin: 5px 0 0;
-    line-height: 1.3;
-    font-style: italic;
-}
-
-/* Estilos para el título del carrusel */
 .carousel-title {
-    position: absolute;
-    top: -47px; /* Coloca el título arriba de la imagen */
-    left: 50%;
-    transform: translateX(-50%); /* Centra horizontalmente */
-    font-family: 'Cinzel', serif; /* Usa la misma fuente que otros títulos */
-    color: #eacf9f;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    margin: 0;
-    z-index: 1002; /* Asegura que esté por encima de los botones y la imagen */
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
 }
 
-/* Ajuste del contenedor del carrusel para incluir el título */
-.gallery-modal .carousel {
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Cambia a columna para que el título esté arriba */
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 800px;
-}
-
+/* Footer */
 footer {
-
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(43, 29, 18, 0.8);
-    border-top: 3px solid #8b5a2b;
-    margin-top: auto;
-    color: #f5e8c7;
-}
-
-footer {
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(43, 29, 18, 0.8);
     border: 3px solid #8b5a2b;
-    margin-top: auto;
-    color: #f5e8c7;
+    width: 100%;
+    text-align: center;
 }
 
 .wifi {
     display: flex;
-    flex-direction: row; /* Alinea la imagen y el texto horizontalmente */
-    justify-content: flex-start; /* Alinea desde el inicio (izquierda) */
-    align-items: center; /* Centra verticalmente los elementos */
-    gap: 20px; /* Espacio entre la imagen y el texto */
-    max-width: 1000px; /* Ajusta al ancho máximo de las secciones */
-    margin: 0 auto; /* Centra el contenedor dentro del footer */
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+    gap: 15px;
 }
 
 .wifi-image {
-    max-width: 200px; /* Ajusta el tamaño de la imagen según necesites */
-    height: auto;
-
+    width: 100%;
+    max-width: 200px;
 }
 
 .wifi-text {
-    text-align: left; /* Alinea el texto a la izquierda */
-    flex-grow: 1; /* Permite que el texto ocupe el espacio restante */
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.4rem);
 }
 
-.wifi-text p {
-    margin: 5px 0; /* Espaciado uniforme entre párrafos */
-}
-
+/* Scroll Top Button */
 .scroll-top-image {
-    width: 45px; /* Ajusta el tamaño según prefieras */
-    height: 45px;
-    display: block; /* Asegura que la imagen ocupe el espacio correctamente */
+    width: clamp(35px, 10vw, 45px);
+    height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .intro {
+        margin-bottom: 30px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-section {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .gallery-section {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .carousel-btn.prev {
+        left: 5px;
+    }
+
+    .carousel-btn.next {
+        right: 5px;
+    }
+
+    .wifi {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-section {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+    }
+
+    .gallery-section {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (min-width: 1025px) {
+    .menu-section {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns on desktop */
+    }
+
+    .gallery-section {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    }
+
+    .wifi {
+        flex-direction: row; /* Horizontal layout on desktop */
+        justify-content: flex-start;
+    }
 }
