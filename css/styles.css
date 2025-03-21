@@ -393,8 +393,15 @@ footer {
         right: 5px;
     }
 
+
+
     .wifi {
+        
         flex-direction: column;
+    }
+
+    footer {
+        width: 87%;
     }
 }
 
@@ -421,6 +428,7 @@ footer {
     }
 
     .wifi {
+        
         flex-direction: row;
         justify-content: center;
         align-items: center;
