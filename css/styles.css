@@ -356,8 +356,12 @@ footer {
     }
 
     .about-image {
-        max-height: 120px;
+        max-height: 100px;
         width: auto;;
+    }
+
+    .about-section p {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
     }
 
     .button-container {
@@ -367,6 +371,10 @@ footer {
 
     .menu-section {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .menu-card-title {
+        font-size: 0.7rem;
     }
 
     .gallery-section {
