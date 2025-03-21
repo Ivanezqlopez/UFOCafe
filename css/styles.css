@@ -326,6 +326,7 @@ footer {
 @media (max-width: 768px) {
     .container {
         padding: 10px;
+        max-width: 250px;
     }
 
     .intro {
@@ -366,9 +367,12 @@ footer {
     .gallery-section {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 @media (min-width: 1025px) {
+
+
     .menu-section {
         grid-template-columns: repeat(5, 1fr);
     }
