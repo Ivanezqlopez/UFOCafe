@@ -373,6 +373,10 @@ footer {
         gap: 10px;
     }
 
+    .butler-kat {
+        max-width: 50%;
+    }
+
     .menu-section {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -403,6 +407,12 @@ footer {
     .wifi {
         
         flex-direction: column;
+    }
+
+    .wifi-image {
+    width: 70%;
+    max-width: 150px;
+    height: auto;
     }
 
     footer {
