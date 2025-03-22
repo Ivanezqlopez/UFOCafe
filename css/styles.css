@@ -369,7 +369,7 @@ footer {
     }
 
     .button-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
