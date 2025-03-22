@@ -147,6 +147,7 @@ h3 {
 .menu-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 370px; /* Altura fija para las filas */
     gap: 10px;
     width: 100%;
 }
@@ -160,27 +161,35 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between; /* Distribuye el espacio */
+    min-height: 300px;
 }
 
 .menu-card-image {
     width: 100%;
-    max-height: 50%;
+    height: 120px; /* Altura fija para las imágenes */
     object-fit: cover;
     border-radius: 5px;
     border: 1.5px solid #8b5a2b;
     cursor: pointer;
-
 }
 
-
-.menu-card-title {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    color: #eacf9f;
+.menu-card-description {
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3; /* Reduce el interlineado */
 }
 
-.menu-card-description,
 .menu-card-price {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9rem;
+    color: #eacf9f;
+    margin: 5px 0;
+    font-weight: bold;
+    flex-grow: 0; /* Evita que crezca */
 }
 
 /* About Section */
@@ -303,7 +312,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -321,6 +330,7 @@ footer {
 
 /* Scroll Top Button */
 .scroll-top-image {
+    margin-top: 20px;
     width: clamp(35px, 10vw, 45px);
     height: auto;
 }
